@@ -7,7 +7,14 @@ const setupInput = function () {
     if (key === '\u0003') {
       process.exit();
     }
-    process.stdout.write("Cool");
+    switch (key){
+      case '\u0003': process.exit();
+      case 'w': key = 'Move: up'; break;
+      case 'a': key = 'Move: left'; break;
+      case 's': key = 'Move: down'; break;
+      case 'd': key = 'Move: right'; break;
+    }
+    process.stdout.write(key);
   
   });
 
