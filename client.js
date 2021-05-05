@@ -10,6 +10,17 @@ const connect = function () {
   conn.on("connect", (message) => {
     conn.write("Name: PK");
     console.log("Successfully connected to game server");
+    
+    /*
+    let modifier = 50;
+    let delay = 50;
+    for (let i = 0; i< 20; i++) {
+       setTimeout(() => {
+          conn.write("Move: up");
+        }, delay)
+        delay += modifier;
+     }
+    */
   });
 
   conn.on("data", (data) => {
