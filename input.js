@@ -1,4 +1,8 @@
-const setupInput = function () {
+// Stores the active TCP connection object.
+let connection;
+
+const setupInput = function (conn) {
+  connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
   stdin.setEncoding("utf8");
@@ -14,7 +18,7 @@ const setupInput = function () {
       case 's': key = 'Move: down'; break;
       case 'd': key = 'Move: right'; break;
     }
-    process.stdout.write(key);
+    connection.write(key);
   
   });
 
