@@ -8,9 +8,7 @@ const setupInput = function (conn) {
   stdin.setEncoding("utf8");
   stdin.resume();
   stdin.on("data", handleUserInput = function (key) {
-    if (key === '\u0003') {
-      process.exit();
-    }
+
     switch (key){
       case '\u0003': process.exit();
       case 'w': key = 'Move: up'; break;
