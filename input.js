@@ -17,6 +17,8 @@ const setupInput = function (conn) {
       case 'a': key = 'Move: left'; break;
       case 's': key = 'Move: down'; break;
       case 'd': key = 'Move: right'; break;
+      case 'j': key = 'Say: Bye'; break;
+      case 'h': key = 'Say: Hello'; break;
     }
     connection.write(key);
   
